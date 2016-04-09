@@ -18,5 +18,20 @@ var curry = function(a, b){
     }
   }
 }
-
 console.log(curry(1,2)(1,2)());
+
+let basicArray = [1,2,3,4,5,6,7,8];
+let timesTen = function(array, predicate){
+  return array.forEach(function(item){
+    var predicate = function(value){
+      return value * 2;
+    }
+    console.log(predicate(item += item * 10));
+  })
+}
+
+timesTen(basicArray)
+
+var numbers = [1, 4, 9];
+var roots = numbers.map(Math.sqrt);
+console.log(roots);
