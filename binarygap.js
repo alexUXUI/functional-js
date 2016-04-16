@@ -20,7 +20,7 @@ const convertToBinary = (number) => {
 const findGaps = (val) => {
   console.log('heres the number in binary: ', val)
   for(var i = 0; i < val.length; i++){
-    if(val[i] == 0 && val[i + 1] == 1 || 0 && val[i - 1] == 1 || 0) {
+    if(val[i] == 0 && val[i + 1] == 1 || false && val[i - 1] == 1 || false) {
       valGap.push(val[i])
     }
   }
@@ -33,4 +33,5 @@ const binaryGap = (num) => {
   return gaps
 }
 
-console.log("this is the number of gaps: ", binaryGap(234))
+console.log("The number of gaps is: ", binaryGap(43555));
+
