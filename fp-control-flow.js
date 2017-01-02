@@ -1,8 +1,8 @@
 /**
  * The alternator can be used to build in simple conditional logic.
  * When you pass two functions, if the first function resolves, it will
- * return the value of func one. If the first func fails, then the
- * alternator func will return the value of the second func.
+ * return func one. If the first func fails, then the
+ * alternator func will return the second func.
  */
 
 const alternator = (fn1, fn2) => (val) => fn1(val) || fn2(val)
