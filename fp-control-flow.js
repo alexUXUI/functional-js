@@ -5,7 +5,7 @@
  * alternator func will return the second func.
  */
 
-const alternator = (fn1, fn2) => (val) => fn1(val) || fn2(val)
+const alternator = (fn1, fn2) => val => fn1(val) || fn2(val)
 
 /**
  * Func stubs to simulate return values
@@ -32,4 +32,4 @@ const equalsTrue = alternator(returnTrue, returnNull)(), // true
       equalsNull = alternator(returnFalse, returnNull)(), // null
       equalsFalse = alternator(returnFalse, returnFalse)() // false
 
-console.log(equalsTrue, equalsFalse, equalsNull);
+console.log(equalsTrue, equalsFalse, equalsNull)
