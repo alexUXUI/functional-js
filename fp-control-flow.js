@@ -19,17 +19,17 @@ const returnNull  = () => null,
       returnFalse = () => false
 
 /**
- * By passing 'unsafe' func(s) to Alternator func, it can dictate
- * the course of the program depending on which function resolves
- * if a function has an error or returns null, it is effectively handled.
+ * By passing 'unsafe' func(s) to Alternator func, alternator can dictate
+ * the course of the program, depending on which function resolves.
+ * If a function has an error or returns null, it is effectively handled.
  *
  * @param {function} fn1
  * @param {function} fn2
  * @return {function}
  */
 
-const equalsTrue = alternator(returnTrue, returnNull)() // true
-const equalsNull = alternator(returnFalse, returnNull)() // null
-const equalsFalse = alternator(returnFalse, returnFalse)() // false
+const equalsTrue = alternator(returnTrue, returnNull)(), // true
+      equalsNull = alternator(returnFalse, returnNull)(), // null
+      equalsFalse = alternator(returnFalse, returnFalse)() // false
 
 console.log(equalsTrue, equalsFalse, equalsNull);
